@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Day 2</title>
+        <link rel="stylesheet" type="text/css" href="day-2.css">
+        <link rel="stylesheet" type="text/css" href="../style.css">
+    </head>
+    <body>
+       <div class="frame bg">
+            <div class="menu" onclick="toggleMenu(this)">
+                <div class="top"></div>
+                <div class="middle"></div>
+                <div class="bottom"></div>
+            </div>
+        </div>
+
+        <script>
+            function toggleMenu(element) {
+                if (element.classList.contains('active')) {
+                    element.classList.remove('active');
+                    element.classList.add('not-active');
+                } else {
+                    element.classList.remove('not-active');
+                    element.classList.add('active');
+                }
+            }
+        </script>
+    </body>
+</html>
