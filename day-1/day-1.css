@@ -6,7 +6,7 @@
 }
 
 .bg {
-    background-image: linear-gradient(-145deg, #FED9ED, #BB9CC0, #67729D);
+    background-image: linear-gradient(-145deg, #d69fca, #404661);
     display: flex;
     flex-direction: column;
     align-items: center;
