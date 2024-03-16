@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.bg {
+    background-color: #272C34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    width: 225px;
+    height: 225px;
+    clip-path: circle(50%);
+    animation: fade-in-out 4s ease infinite;
+}
+
+.sky {
+    height: 65%;
+    width: 100%;
+    background-color: #FED9ED;
+}
+
+.ground {
+    height: 35%;
+    width: 100%;
+    background-color: #67729D;
+}
+
+.shadow {
+    position: absolute;
+    height: 100px;
+	width: 250px;
+    background-color: #4E5882;
+    clip-path: polygon(16% 0%, 76% 0%, 100% 0%);
+    transform-origin: 50% 0%;
+    animation: shadow-move 4s linear infinite;
+}
+
+.pyramid-l {
+    position: absolute;
+    top: 33%;
+    left: 18%;
+    height: 72px;
+	width: 100px;
+    background-color: #E7BCDE;
+    clip-path: polygon(0% 100%, 100% 100%, 75% 0%);
+    animation: shade-l 4s linear infinite;
+}
+
+.pyramid-r {
+    position: absolute;
+    top: 33%;
+    right: 16%;
+    height: 72px;
+	width: 73.5px;
+    background-color: #BB9CC0;
+    clip-path: polygon(34% 100%, 100% 100%, 0% 0%);
+    animation: shade-r 4s linear infinite;
+}
+
+.sun {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    top: 3%;
+    left: 45%;
+    background-color: #55456B;
+    transform-origin: 50% 450%;
+    animation: sun-go-round 4s linear infinite;
+}
+
+@keyframes sun-go-round {
+    0% {
+        transform: rotate(-70deg);
+    }
+
+    30% {
+        transform: rotate(-35deg);
+    }
+
+    50% {
+        transform: rotate(-25deg);
+    }
+
+    100% {
+        transform: rotate(70deg);
+    }
+}
+
+@keyframes shadow-move {
+    0% {
+	    clip-path: polygon(16% 0%, 76% 0%, 100% 0%);
+    }
+	
+	30% {
+        clip-path: polygon(16% 0%, 76% 0%, 100% 40%);
+	}
+	
+	50% {
+        clip-path: polygon(16% 0%, 76% 0%, 80% 30%);
+	}
+
+    65% {
+        clip-path: polygon(16% 0%, 76% 0%, 60% 20%);
+    }
+
+	80% {
+        clip-path: polygon(16% 0%, 76% 0%, 5% 50%);
+	}
+
+    100% {
+        clip-path: polygon(16% 0%, 76% 0%, -100% 0%);
+    }
+}
+
+@keyframes shade-l {
+    0% {
+        background-color: #E7BCDE;
+    }
+
+    50% {
+        background-color: #E7BCDE;
+    }
+
+    75% {
+        background-color: #BB9CC0;
+    }
+
+    100% {
+        background-color: #BB9CC0;
+    }
+}
+
+@keyframes shade-r {
+    0% {
+        background-color: #BB9CC0;
+    }
+
+    50% {
+        background-color: #BB9CC0;
+    }
+
+    75% {
+        background-color: #E7BCDE;
+    }
+
+    100% {
+        background-color: #E7BCDE;
+    }
+}
+
+
+@keyframes fade-in-out {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
